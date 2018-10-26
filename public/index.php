@@ -19,7 +19,7 @@
 |
 */
 
-require __DIR__.'/../kreatifmarket/bootstrap/autoload.php';
+require __DIR__.'/../bootstrap/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +33,7 @@ require __DIR__.'/../kreatifmarket/bootstrap/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../kreatifmarket/bootstrap/app.php';
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -46,11 +46,6 @@ $app = require_once __DIR__.'/../kreatifmarket/bootstrap/app.php';
 | and wonderful application we have prepared for them.
 |
 */
-
-// set the public path to this directory
-$app->bind('path.public', function() {
-return __DIR__;
-});
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
